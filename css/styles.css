@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Author', sans-serif;
+    background: linear-gradient(45deg,#e8a39c,#fec195,#797ef6,#1e2f99,#8a5082,#4d4471, #051a2d);
+    background-size: 3000%;
+    animation: color 35s alternate infinite;
+}
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    
+    100%{
+        background-position: 50% 100%;
+    }
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    font-size: 32px;
+    text-shadow: -1px 0px 15px rgba(0,0,0,0.25);
+    color: lightgray;
+}
+
+.number{
+    display: inline-block;
+    width: 140px;
+    font-size: 128px;
+    font-family: 'Author', sans-serif;
+    text-align: center;
+    text-shadow: -1px 0px 15px rgba(37,27,27,0.25);
+    border: none;
+    color: lightgray;
+    background-color: transparent;
+}
+.buttons button{
+    margin: 0 7px;
+    padding: 40px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 6px 0 lightgray ;
+    transition: all 0.3s ease;
+}
+.buttons button:disabled{
+    transition: all 0.1s ease;
+}
+
+#play {
+    background-image: url(../img/play.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#stop{
+    background-image: url(../img/stop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#restart{
+    background-image: url(../img/restart.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#play:active{
+    box-shadow: 0 0 0 lightgray;
+    transform: translateY(6px);
+    /* background-color: #90EE90; */
+} 
+#play:disabled{
+    box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+}
+#play:disabled:active{
+    transform: translatex(4px);
+}
+#stop:active{
+    box-shadow: 0 0 0 lightgray;
+    transform: translateY(6px);
+    /* background-color: #FF7376; */
+}
+#restart:active{
+    box-shadow: 0 0 0 lightgray;
+    transform: translateY(6px);
+    animation: spin 1s;
+}
+
+@media (max-width: 550px) {
+    .clock{
+        display: flex;
+    }
+    .number{
+        width: 80px;
+        font-size: 58px;
+        
+    }
+    .buttons button{
+        margin: 30px 10px auto 10px;
+        padding: 35px;
+    }
+
+}

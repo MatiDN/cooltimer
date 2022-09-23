@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=author@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>CoolTimer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <input class="number" type="text" maxlength="2" value="00"><span>hs</span>
+            <input class="number" type="text" maxlength="2" value="00"><span>min</span>
+            <input class="number" type="text" maxlength="2" value="00"><span>sec</span>
+        </div>
+        <div class="buttons">
+            <button id="play" onclick="startTimer()"></button>
+            <button id="stop" onclick="stopTimer()"></button>
+            <button id="restart" onclick="restartTimer()"></button>
+        </div>
+    </div>
+
+    <script src="js/timer.js"></script>
+</body>
+</html>
